@@ -56,5 +56,17 @@ namespace UserMaitenance
                 }
             }
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+            listBox1.DataSource = users;
+
+            users = new BindingList<User>(users);
+            users.Remove((User)listBox1.SelectedItem);
+
+            listBox1.DataSource = users;
+
+        }
     }
 }
